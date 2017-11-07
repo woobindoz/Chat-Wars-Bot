@@ -124,11 +124,11 @@ orders = {
     'gorni_fort': '⛰Горный форт',
     'morskoi_fort': '⚓Морской форт',
     'gora': '⛰',
-    'cover': '🛡Встретить гостей',
-    'attack': '⚔Пойти в гости',
+    'cover': '🛡Защита', #пофиксил пробел Кольцова
+    'attack': '⚔Атака',  #пофиксил пробел Кольцова
     'cover_symbol': '🛡',
     'hero': '🏅Герой',
-    'corovan': '/go',
+    'corovan': '/go', # Надо бы добавть уже походы в Караваны, а то очередной Хеллоуин пропустим
     'peshera': '🕸Пещера',
     'quests': '🗺 Квесты',
     'castle_menu': '🏰Замок',
@@ -253,10 +253,10 @@ auto_def_enabled = True
 donate_enabled = False
 quest_fight_enabled = True
 build_enabled = False
-firststock_enabled = True
-secondstock_enabled = False
+firststock_enabled = False
+secondstock_enabled = True
 twinkstock_enabled = False
-trade_active = False
+trade_active = True # Любопытненько
 report = False
 arenafight = re.search('Поединков сегодня (\d+) из (\d+)', 'Поединков сегодня 0 из 0')
 victory = 0
@@ -822,7 +822,7 @@ def parse_text(text, username, message_id):
             twinkstock_enabled = False
             send_msg(pref, msg_receiver, 'Сток обновлен')
 
-    elif username == 'ChatWarsTradeBot' and len(resource_id_list)!= 0 and trade_active == False:
+elif username == 'ChatWarsTradeBot' and len(resource_id_list)!= 0 and trade_active == False: #любопытно, это что, для быстрого сбора ресурсов с твинов? надо бы постучаться за новой версией
         log('добавляем ресурсы по списку..')
         trade_active = True
         for res_id in resource_id_list:
