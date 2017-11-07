@@ -822,7 +822,7 @@ def parse_text(text, username, message_id):
             twinkstock_enabled = False
             send_msg(pref, msg_receiver, 'Сток обновлен')
 
-elif username == 'ChatWarsTradeBot' and len(resource_id_list)!= 0 and trade_active == False: #любопытно, это что, для быстрого сбора ресурсов с твинов? надо бы постучаться за новой версией
+elif username == 'ChatWarsTradeBot' and len(resource_id_list)!= 0 and trade_active == False: 
         log('добавляем ресурсы по списку..')
         trade_active = True
         for res_id in resource_id_list:
