@@ -124,8 +124,8 @@ orders = {
     'gorni_fort': '⛰Горный форт',
     'morskoi_fort': '⚓Морской форт',
     'gora': '⛰',
-    'cover': '🛡Встретить гостей',
-    'attack': '⚔Пойти в гости',
+    'cover': '🛡Защита',
+    'attack': '⚔Атака',
     'cover_symbol': '🛡',
     'hero': '🏅Герой',
     'corovan': '/go',
@@ -822,10 +822,7 @@ def parse_text(text, username, message_id):
             twinkstock_enabled = False
             send_msg(pref, msg_receiver, 'Сток обновлен')
 
-elif username == 'ChatWarsTradeBot' and len(resource_id_list)!= 0 and trade_active == False: 
-=======
     elif username == 'ChatWarsTradeBot' and len(resource_id_list)!= 0 and trade_active == False:
->>>>>>> parent of a3a3386... Откатился после тыкв и пофиксил пробелы
         log('добавляем ресурсы по списку..')
         trade_active = True
         for res_id in resource_id_list:
