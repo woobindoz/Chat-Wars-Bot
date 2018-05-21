@@ -22,7 +22,7 @@ pathname = os.path.dirname(sys.argv[0])
 fullpath = os.path.abspath(pathname)
 
 # username игрового бота
-bot_username = 'ChatWarsBot'
+bot_username = 'ChatWarsClassicBot'
 
 # ваш username или username человека, который может отправлять запросы этому скрипту
 admin_username = ''
@@ -253,8 +253,8 @@ auto_def_enabled = True
 donate_enabled = False
 quest_fight_enabled = True
 build_enabled = False
-firststock_enabled = True
-secondstock_enabled = False
+firststock_enabled = False
+secondstock_enabled = True
 twinkstock_enabled = False
 trade_active = False
 report = False
