@@ -511,6 +511,21 @@ def parse_text(text, username, message_id):
             else:
                 send_msg('@', admin_username, 'Капча не найдена?')
 
+        # попытка сделать обработчик бани, отправляем команду баня, и форвардим сообщение админу
+
+        elif 'Ты встретил несколько больных созданиий,' in text:
+            log("Встретил созданий")
+            fwd('@', admin_username, message_id)
+            action_list.clear()
+            action_list.append('\/bath')
+
+        # вариант встретить баню в hero
+
+        elif 'Посетить термы' in text:
+            log("Пригласили в баню")
+            send_msg(pref, msg_receiver, 'Пора в баню')
+            fwd(pref, msg_receiver, message_id)
+
         elif 'На сегодня ты уже своё отвоевал. Приходи завтра.' in text:
             arena_delay = True
             arena_delay_day = datetime.now(tz).day
